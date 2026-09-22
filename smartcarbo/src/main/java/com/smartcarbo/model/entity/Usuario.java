@@ -20,7 +20,7 @@ public class Usuario {
     private Integer idade;
     private Double altura;
     private Double peso;
-    Private String sexo;
+    private String sexo;
     private String objetivo;
 
     public Long getId() {
@@ -88,7 +88,7 @@ public class Usuario {
     }
 
     public String getObjetivo() {
-        return Objetivo;
+        return objetivo;
     }
 
     public void setObjetivo(String objetivo) {
