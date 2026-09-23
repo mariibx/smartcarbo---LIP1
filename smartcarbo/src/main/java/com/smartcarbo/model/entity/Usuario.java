@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "usuario")
 public class Usuario {
@@ -17,11 +19,15 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
-    private Integer idade;
+    private LocalDate dataNascimento;
     private Double altura;
     private Double peso;
     private String sexo;
     private String objetivo;
+    private String nivelAtividade;
+    private String restricoes;
+    private String condicaoSaude;
+    private Integer avaliacaoAlimentacao;
 
     public Long getId() {
         return id;
@@ -55,12 +61,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Integer getIdade() {
-        return idade;
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setIdade(Integer idade) {
-        this.idade = idade;
+    public void SetDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public Double getAltura() {
@@ -93,6 +99,38 @@ public class Usuario {
 
     public void setObjetivo(String objetivo) {
         this.objetivo = objetivo;
+    }
+
+    public String getNivelAtividade() {
+        return nivelAtividade;
+    }
+
+    public void setNivelAtividadde(String nivelAtividade) {
+        this.nivelAtividade = nivelAtividade;
+    }
+
+    public String getRestricoes() {
+        return restricoes;
+    }
+
+    public void setRestricoes(String restricoes) {
+        this.restricoes = restricoes;
+    }
+
+    public String getCondicaoSaude() {
+        return condicaoSaude;
+    }
+
+    public void setCondicaoSaude(String condicaoSaude) {
+        this.condicaoSaude = condicaoSaude;
+    }
+
+    public Integer getAvaliacaoAlimentacao() {
+        return avaliacaoAlimentacao;
+    }
+
+    public void setAvaliacaoAlimentacao(Integer avaliacaoAlimentacao) {
+        this.avaliacaoAlimentacao = avaliacaoAlimentacao;
     }
 
 }
