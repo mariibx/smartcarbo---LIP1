@@ -1,0 +1,142 @@
+
+
+### LISTAR USUÁRIOS
+GET http://localhost:8080/api/v1/usuarios
+
+### CADASTRAR USUÁRIO
+POST http://localhost:8080/api/v1/usuarios
+Content-Type: application/json
+
+{
+    "nome": "Teste REST Client",
+    "email": "restclient@smartcarbo.com",
+    "senha": "123456",
+    "tipoUsuario": "CLIENTE"
+}
+
+### BUSCAR USUÁRIO
+GET http://localhost:8080/api/v1/usuarios/10008
+
+
+### ATUALIZAR USUÁRIO
+PUT http://localhost:8080/api/v1/usuarios/10008
+Content-Type: application/json
+
+{
+    "nome": "Usuario REST Atualizado",
+    "email": "restatualizado@smartcarbo.com",
+    "senha": "123456",
+    "tipoUsuario": "CLIENTE"
+}
+
+### EXCLUIR USUÁRIO
+DELETE http://localhost:8080/api/v1/usuarios/10008
+
+### LOGIN
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "teste@smartcarbo.com",
+    "senha": "123456"
+}
+
+### LISTAR ATIVIDADES FÍSICAS
+GET http://localhost:8080/api/v1/atividades-fisicas
+
+#### CADASTRAR ATIVIDADE FÍSICA
+POST http://localhost:8080/api/v1/atividades-fisicas
+Content-Type: application/json
+
+{
+    "nome": "Corrida Leve",
+    "descricao": "Corrida de baixa intensidade",
+    "duracao": 30,
+    "calorias": 250
+}
+
+### BUSCAR ATIVIDADE
+GET http://localhost:8080/api/v1/atividades-fisicas/3
+
+### ATUALIZAR ATIVIDADE FÍSICA
+PUT http://localhost:8080/api/v1/atividades-fisicas/3
+Content-Type: application/json
+
+{
+    "nome": "Corrida Moderada",
+    "descricao": "Corrida de intensidade moderada",
+    "duracao": 40,
+    "calorias": 350
+}
+
+### EXCLUIR ATIVIDADE FÍSICA
+DELETE http://localhost:8080/api/v1/atividades-fisicas/3
+
+
+### LISTAR REGISTROS DE ALIMENTAÇÃO
+GET http://localhost:8080/api/v1/registros-alimentacao
+
+### CADASTRAR REGISTRO DE ALIMENTAÇÃO
+POST http://localhost:8080/api/v1/registros-alimentacao
+Content-Type: application/json
+
+{
+    "nomeAlimento": "Arroz integral",
+    "quantidade": 120.0,
+    "calorias": 150.0,
+    "carboidratos": 31.0,
+    "proteinas": 3.5,
+    "gorduras": 0.5,
+    "fibras": 2.0,
+    "sodio": 2.0,
+    "tipoRefeicao": "Almoço",
+    "dataHora": "2026-09-30T12:30:00",
+    "usuarioId": 10006
+}
+
+### Listar registros de alimentação
+GET http://localhost:8080/api/v1/registros-alimentacao
+Accept: application/json
+
+### Criar registro de alimentação
+POST http://localhost:8080/api/v1/registros-alimentacao
+Content-Type: application/json
+
+{
+  "nomeAlimento": "Feijão carioca",
+  "quantidade": 100,
+  "calorias": 76,
+  "carboidratos": 14,
+  "proteinas": 4.8,
+  "gorduras": 0.5,
+  "fibras": 8.5,
+  "sodio": 2,
+  "tipoRefeicao": "Almoço",
+  "dataHora": "2026-10-03T12:30:00",
+  "usuarioId": 10006
+}
+
+### Buscar registro de alimentação por ID
+GET http://localhost:8080/api/v1/registros-alimentacao/3
+Accept: application/json
+
+### Atualizar registro de alimentação
+PUT http://localhost:8080/api/v1/registros-alimentacao/3
+Content-Type: application/json
+
+{
+  "nomeAlimento": "Feijão preto",
+  "quantidade": 120,
+  "calorias": 91,
+  "carboidratos": 16,
+  "proteinas": 5.5,
+  "gorduras": 0.6,
+  "fibras": 9.0,
+  "sodio": 3,
+  "tipoRefeicao": "Almoço",
+  "dataHora": "2026-10-03T12:30:00",
+  "usuarioId": 10006
+}
+
+### Excluir registro de alimentação
+DELETE http://localhost:8080/api/v1/registros-alimentacao/3

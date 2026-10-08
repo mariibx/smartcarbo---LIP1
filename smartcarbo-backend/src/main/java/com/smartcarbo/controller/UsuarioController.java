@@ -37,14 +37,16 @@ public class UsuarioController {
         return usuarioService.buscarPorId(id);
     }
 
-    @PutMapping
-    public Usuario atualizar(@RequestBody Usuario usuario) {
-        return usuarioService.atualizar(usuario);
+    @PutMapping("/{id}")
+    public Usuario atualizar(
+            @PathVariable Long id,
+            @RequestBody Usuario usuario
+    ) {
+        return usuarioService.atualizar(id, usuario);
     }
 
     @DeleteMapping("/{id}")
     public void excluir(@PathVariable Long id) {
         usuarioService.excluir(id);
     }
-
 }
